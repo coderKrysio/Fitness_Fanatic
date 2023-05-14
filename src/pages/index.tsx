@@ -1,5 +1,5 @@
 import { Footer } from '@/components/Footer';
-import { HomePage } from '@/components/Home';
+import { HomePage } from '@/components/HomePage';
 import { Navbar } from '@/components/Navbar';
 import { Box } from '@mui/material';
 
