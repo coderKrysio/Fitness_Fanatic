@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import { BodyPart } from "./BodyPart"
 
-export const HorizontalScrollbar = ({ data }: any) => {
+export const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }: any) => {
     return (
         <div>
             {data.map((item: any) => (

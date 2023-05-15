@@ -3,9 +3,8 @@ import { Box, Button, Stack, TextField, Typography } from "@mui/material"
 import { useEffect, useState } from "react"
 import { HorizontalScrollbar } from "./HorizontalScrollbar";
 
-export const SearchExercises = () => {
+export const SearchExercises = ({ setExercises, bodyPart, setBodyPart }: any) => {
     const [search, setSearch] = useState('');
-    const [exercises, setExercises] = useState([]);
     const [bodyParts, setBodyParts] = useState<any[]>([]);
 
     useEffect(() => {
@@ -99,7 +98,11 @@ export const SearchExercises = () => {
                     p: '20px',
                 }}
             >
-                <HorizontalScrollbar data={bodyParts} />
+                <HorizontalScrollbar 
+                    data={bodyParts}
+                    bodyPart={bodyPart}
+                    setBodyPart={setBodyPart}
+                />
             </Box>
         </Stack>
     )
