@@ -1,4 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material"
+import { ExerciseCard } from "./ExerciseCard"
 
 export const  Exercises = ({ exercises, setExercises, bodyPart }: any) => {
     return (
@@ -26,7 +27,10 @@ export const  Exercises = ({ exercises, setExercises, bodyPart }: any) => {
                 justifyContent={"center"}
             >
                 {exercises.map((exercise: any, index: any) => (
-                    <p>{exercise.name}</p>
+                    <ExerciseCard 
+                        key={index} 
+                        exercise={exercise}
+                     />
                 ))}
             </Stack>
         </Box>
