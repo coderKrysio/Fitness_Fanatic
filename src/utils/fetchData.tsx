@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const exerciseOptions = {
     method: 'GET',
     headers: {
@@ -14,9 +16,8 @@ export const youtubeOptions = {
     }
 };
 
-export const fetchData = async (url: RequestInfo | URL, options: RequestInit | undefined) => {
-    const response = await fetch(url, options);
-    const data = await response.json();
+export const fetchData = async (url: any, options: any) => {
+    const { data } = await axios.get(url, options);
 
     return data;
 }
