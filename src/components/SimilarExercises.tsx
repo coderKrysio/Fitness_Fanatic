@@ -13,7 +13,7 @@ export const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }: 
                 variant="h3"
                 mb={5}
             >
-                Exercises that target the same muscle group
+                Similar <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>Target Muscle</span> exercises
             </Typography>
 
             <Stack
@@ -33,7 +33,7 @@ export const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }: 
                 variant="h3"
                 mb={5}
             >
-                Exercises that use the same equipment
+                Similar <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>Equipment</span> exercises
             </Typography>
 
             <Stack
