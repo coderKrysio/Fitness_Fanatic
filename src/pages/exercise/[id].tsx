@@ -1,4 +1,5 @@
 import { ExerciseDetail } from "@/components/ExerciseDetail";
+import { Navbar } from "@/components/Navbar";
 import { useRouter } from "next/router";
 
 export default function Exercise () {
@@ -6,6 +7,9 @@ export default function Exercise () {
     const { id } = router.query;
     
     return (
-        <ExerciseDetail id={id} />
+        <>
+            <Navbar />
+            <ExerciseDetail id={id} />
+        </>
     )
 }
