@@ -7,7 +7,7 @@ import { exerciseOptions, fetchData, youtubeOptions } from "@/utils/fetchData"
 
 export const ExerciseDetail = ({ id }: any) => {
     const [exerciseDetail, setExerciseDetail] = useState({});
-    const [exerciseVideos, setExerciseVideos] = useState({});
+    const [exerciseVideos, setExerciseVideos] = useState([]);
 
     useEffect(() => {
         const fetchExerciseData = async () => {
@@ -31,7 +31,7 @@ export const ExerciseDetail = ({ id }: any) => {
             />
             <ExerciseVideos 
                 exerciseVideos={exerciseVideos} 
-                name={exerciseDetail.name} 
+                name={(exerciseDetail as any).name} 
             />
             <SimilarExercises />
         </Box>        
