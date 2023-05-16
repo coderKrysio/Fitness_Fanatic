@@ -3,13 +3,11 @@ import { Detail } from "./Detail"
 import { ExerciseVideos } from "./ExerciseVideos"
 import { SimilarExercises } from "./SimilarExercises"
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import { exerciseOptions, fetchData } from "@/utils/fetchData"
+import { exerciseOptions, fetchData, youtubeOptions } from "@/utils/fetchData"
 
-export const ExerciseDetail = () => {
+export const ExerciseDetail = ({ id }: any) => {
     const [exerciseDetail, setExerciseDetail] = useState({});
-    const router = useRouter();
-    const { id } = router.query;
+    const [exerciseVideos, setExerciseVideos] = useState({});
 
     useEffect(() => {
         const fetchExerciseData = async () => {
@@ -18,6 +16,9 @@ export const ExerciseDetail = () => {
 
             const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, exerciseOptions);
             setExerciseDetail(exerciseDetailData);
+
+            const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?q=${exerciseDetailData.name}`, youtubeOptions);
+            setExerciseVideos(exerciseVideosData);
         }
 
         fetchExerciseData();
@@ -25,8 +26,13 @@ export const ExerciseDetail = () => {
 
     return (
         <Box>
-            <Detail exerciseDetail={exerciseDetail} />
-            <ExerciseVideos />
+            <Detail 
+                exerciseDetail={exerciseDetail} 
+            />
+            <ExerciseVideos 
+                exerciseVideos={exerciseVideos} 
+                name={exerciseDetail.name} 
+            />
             <SimilarExercises />
         </Box>        
     )
