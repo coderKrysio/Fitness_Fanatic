@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Josefin Sans';
-  background-color: #FFFAFB;
+  background-color: #17242a;
 }
 
 ::-webkit-scrollbar {
@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FF2625;
+  color: #daff96;
   font-size: 25px;
   border-radius: 4px;
   position: absolute;
@@ -62,9 +62,9 @@ body {
 
 .exercise-card {
   width: 400px;
-  height: 445px;
-  background: #fff;
-  border-top: 4px solid #FF2625;
+  height: 460px;
+  background: #def2f1;
+  border-top: 4px solid #3aafa9;
   border-bottom-left-radius: 20px;
   text-decoration: none;
   display: flex;
@@ -90,8 +90,8 @@ body {
 }
 
 .search-btn:hover {
-  color: #FF2625 !important;
-  border: 1px solid #FF2625 !important;
+  color: #daff96 !important;
+  border: 1px solid #daff96 !important;
 }
 
 .exercise-video {

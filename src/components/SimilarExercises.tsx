@@ -8,12 +8,15 @@ export const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }: 
             sx={{
                 mt: { lg: '100px', xs: '0'}
             }}
+            p="20px"
         >
             <Typography
                 variant="h3"
                 mb={5}
+                color={'#3aafa9'}
+                fontWeight={700} 
             >
-                Similar <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>Target Muscle</span> exercises
+                Similar <span style={{ color: '#def2f1', textTransform: 'capitalize' }}>Target Muscle</span> exercises
             </Typography>
 
             <Stack
@@ -32,8 +35,10 @@ export const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }: 
             <Typography
                 variant="h3"
                 mb={5}
+                color={'#3aafa9'}
+                fontWeight={700} 
             >
-                Similar <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>Equipment</span> exercises
+                Similar <span style={{ color: '#def2f1', textTransform: 'capitalize' }}>Equipment</span> exercises
             </Typography>
 
             <Stack

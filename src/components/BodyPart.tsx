@@ -9,8 +9,8 @@ export const BodyPart = ({ item, setBodyPart, bodyPart}: any) => {
             className="bodyPart-card"
             sx={{
                 border: 'none',
-                borderTop: bodyPart === item ? '4px solid #ff2625' : '',
-                backgroundColor: '#fff',
+                borderTop: bodyPart === item ? '4px solid #daff96' : '',
+                backgroundColor: '#3aafa9',
                 borderBottomLeftRadius: '20px',
                 width: '270px',
                 height: '280px',
@@ -23,18 +23,18 @@ export const BodyPart = ({ item, setBodyPart, bodyPart}: any) => {
             }}
         >
             <img
-                src="/icons/gym.png"
+                src="https://img.icons8.com/ios-filled/100/gum-.png"
                 alt="dumbell"
                 style={{
-                    width:'40px',
-                    height:'40px',
+                    width:'50px',
+                    height:'50px',
                 }}                
             />
 
             <Typography
                 fontSize={"24px"}
                 fontWeight={"bold"}
-                color={"#3a1212"}
+                color={"#17242a"}
                 textTransform={'capitalize'}
             >
                 {item}

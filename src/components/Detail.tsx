@@ -38,6 +38,7 @@ export const Detail = ({ exerciseDetail }: any) => {
                     variant="h3"
                     fontWeight={700}
                     textTransform="capitalize"
+                    color={'#def2f1'}
                 >
                     {name}
                 </Typography>
@@ -46,7 +47,7 @@ export const Detail = ({ exerciseDetail }: any) => {
                     sx={{ 
                         fontSize: { lg: '24px', xs: '18px' } 
                     }} 
-                    color="#4F4C4C"
+                    color="#f0f5f9"
                 >
                     Exercises keep you strong.{' '}
                     <span style={{ textTransform: 'capitalize' }}>{name}</span> bup is one
@@ -63,7 +64,7 @@ export const Detail = ({ exerciseDetail }: any) => {
                     >
                         <Button
                             sx={{
-                                background: '#fff2db',
+                                background: '#daff96',
                                 borderRadius: '50%',
                                 width: '100px',
                                 height: '100px',
@@ -82,6 +83,7 @@ export const Detail = ({ exerciseDetail }: any) => {
                         <Typography
                             variant="h5"
                             textTransform={'capitalize'}
+                            color={'#def2f1'}
                         >
                             {item.name}
                         </Typography>

@@ -45,6 +45,7 @@ export const  Exercises = ({ exercises, setExercises, bodyPart }: any) => {
             <Typography
                 variant="h3"
                 mb={"46px"}
+                color={'#def2f1'}
             >
                 Showing Results
             </Typography>
@@ -71,7 +72,9 @@ export const  Exercises = ({ exercises, setExercises, bodyPart }: any) => {
             >
                 {exercises.length > 9 && (
                     <Pagination
-                        color="standard"
+                        sx={{
+                            background: '#def2f1',
+                        }}
                         shape="rounded"
                         defaultPage={1}
                         count={Math.ceil(exercises.length / exercisesPerPage)}
