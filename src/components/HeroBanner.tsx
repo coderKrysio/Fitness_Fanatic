@@ -9,14 +9,16 @@ export const HeroBanner = () => {
             }}
         >
             <Typography
-                color={"#ff2625"}
+                color={"#daff96"}
                 fontWeight={"600"}
                 fontSize={'26px'}
+                
             >
                 Fitness Club
             </Typography>
 
             <Typography
+                color={'#def2f1'}
                 fontWeight={"700"}
                 sx={{
                     fontSize: { lg: '44px', xs: '40px' }
@@ -31,17 +33,18 @@ export const HeroBanner = () => {
                 fontSize={'22px'}
                 lineHeight={'35px'}
                 mb={4}
+                color={'#def2f1'}
             >
                 Check out the most effective exercises
             </Typography>
 
             <Button
-                variant="contained"
-                color="error"
+                className="search-btn"
                 href="#exercises"
                 sx={{
-                    background: '#ff2625',
+                    background: '#daff96',
                     padding: '10px',
+                    color: '#000',
                 }}
             >
                 Explore Exercises
@@ -49,7 +52,7 @@ export const HeroBanner = () => {
 
             <Typography
                 fontWeight={600}
-                color={'#ff2625'}
+                color={'#daff96'}
                 sx={{
                     opacity: 0.1,
                     display: { lg: 'block', xs: 'none'}
@@ -60,7 +63,7 @@ export const HeroBanner = () => {
             </Typography>
 
             <img 
-                src="/images/banner.png" 
+                src="/images/banner.jpg" 
                 alt="banner" 
                 className="hero-banner-img" 
             />

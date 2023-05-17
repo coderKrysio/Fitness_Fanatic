@@ -19,8 +19,8 @@ export const ExerciseCard = ({ exercise }: any) => {
                 <Button
                     sx={{ 
                         ml: "21px", 
-                        color: "#fff", 
-                        background: "#FFA9A9", 
+                        color: "#17242a", 
+                        background: "#eec1a0", 
                         fontSize: "14px", 
                         borderRadius: "20px",
                         textTransform: "capitalize",
@@ -32,8 +32,8 @@ export const ExerciseCard = ({ exercise }: any) => {
                 <Button
                     sx={{ 
                         ml: "21px", 
-                        color: '#fff', 
-                        background: '#FCC757', 
+                        color: '#17242a', 
+                        background: '#abade8', 
                         fontSize: '14px', 
                         borderRadius: '20px', 
                         textTransform: 'capitalize' 
@@ -45,7 +45,7 @@ export const ExerciseCard = ({ exercise }: any) => {
 
             <Typography
                 ml={'21px'}
-                color={'#000'}
+                color={'#17242a'}
                 fontWeight={'bold'}
                 mt={"11px"}
                 pb={'10px'}

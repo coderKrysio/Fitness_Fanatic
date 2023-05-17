@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material"
 import { Box, Stack } from "@mui/system"
+import { Loader } from "./Loader"
 
 export const ExerciseVideos = ({exerciseVideos, name}: any) => {
     return (
@@ -12,10 +13,10 @@ export const ExerciseVideos = ({exerciseVideos, name}: any) => {
             <Typography 
                 sx={{ fontSize: { lg: '44px', xs: '25px' } }} 
                 fontWeight={700} 
-                color="#000" 
+                color="#3aafa9" 
                 mb="33px"
             >
-                Watch <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>{name}</span> exercise videos
+                Watch <span style={{ color: '#def2f1', textTransform: 'capitalize' }}>{name}</span> exercise videos
             </Typography>
 
             <Stack 
@@ -27,38 +28,41 @@ export const ExerciseVideos = ({exerciseVideos, name}: any) => {
                 flexWrap="wrap" 
                 alignItems="center"
             >
-                {exerciseVideos?.map((item: any, index: any) => (
-                    <a
-                        key={index}
-                        className="exercise-video"
-                        href={`https://www.youtube.com/watch?v=${item.video.videoId}`}
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <img 
-                            style={{ borderTopLeftRadius: '20px' }} 
-                            src={item.video.thumbnails[0].url} 
-                            alt={item.video.title} 
-                        />
+                {exerciseVideos ? 
+                    exerciseVideos?.map((item: any, index: any) => (
+                        <a
+                            key={index}
+                            className="exercise-video"
+                            href={`https://www.youtube.com/watch?v=${item.video.videoId}`}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img 
+                                style={{ borderTopLeftRadius: '20px' }} 
+                                src={item.video.thumbnails[0].url} 
+                                alt={item.video.title} 
+                            />
 
-                        <Box>
-                            <Typography 
-                                sx={{ fontSize: { lg: '28px', xs: '18px' } }} 
-                                fontWeight={600} 
-                                color="#000"
-                            >
-                                {item.video.title}
-                            </Typography>
+                            <Box>
+                                <Typography 
+                                    sx={{ fontSize: { lg: '28px', xs: '18px' } }} 
+                                    fontWeight={600} 
+                                    color="#000"
+                                >
+                                    {item.video.title}
+                                </Typography>
 
-                            <Typography 
-                                fontSize="14px" 
-                                color="#000"
-                            >
-                                {item.video.channelName}
-                            </Typography>
-                        </Box>
-                    </a>
-                ))}
+                                <Typography 
+                                    fontSize="14px" 
+                                    color="#000"
+                                >
+                                    {item.video.channelName}
+                                </Typography>
+                            </Box>
+                        </a>
+                    )) :
+                    <Loader />
+                }
             </Stack>
         </Box>
     )

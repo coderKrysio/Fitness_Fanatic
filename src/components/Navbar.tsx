@@ -1,5 +1,4 @@
 import { Stack } from "@mui/material"
-import Image from "next/image"
 import Link from "next/link"
 
 export const Navbar = () => {
@@ -14,12 +13,12 @@ export const Navbar = () => {
             px={'20px'}
         >
             <Link href={'/'}>
-                <Image 
-                    src={'/images/Logo.png'} 
-                    width={48} 
-                    height={48} 
+                <img 
+                    src='https://img.icons8.com/office/80/flex-biceps.png'
                     alt="Logo" 
                     style={{
+                        width: '48px',
+                        height: '48px',
                         margin: '0px 20px', 
                     }} 
                 />
@@ -35,8 +34,8 @@ export const Navbar = () => {
                     href={'/'}
                     style={{
                         textDecoration: 'none',
-                        color: '#3a1212',
-                        borderBottom: '3px solid #ff2625'
+                        color: '#def2f1',
+                        borderBottom: '3px solid #daff96'
                     }}
                 >
                     Home
@@ -46,7 +45,7 @@ export const Navbar = () => {
                     href="#exercises"
                     style={{
                         textDecoration: 'none',
-                        color:  '#3a1212'
+                        color:  '#def2f1'
                     }}
                 >Exercise</a>
             </Stack>

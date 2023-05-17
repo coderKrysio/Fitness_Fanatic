@@ -47,6 +47,7 @@ export const SearchExercises = ({ setExercises, bodyPart, setBodyPart }: any) =>
                 }}
                 mb={'50px'}
                 textAlign={'center'}
+                color={'#def2f1'}
             >
                 Awesome Exercises You <br /> Should Know
             </Typography>
@@ -59,12 +60,13 @@ export const SearchExercises = ({ setExercises, bodyPart, setBodyPart }: any) =>
                     sx={{
                         width: { lg: '800px', xs: '350px'},
                         height: '76px',
-                        backgroundColor: '#fff',
+                        backgroundColor: '#17242a',
                         borderRadius: '40px',
                         input: {
                             fontWeight: '700px',
                             border: 'none',
-                            borderRadius: '4px'
+                            borderRadius: '4px',
+                            color: '#def2f1',
                         }
                     }}
                     value={search}
@@ -76,8 +78,8 @@ export const SearchExercises = ({ setExercises, bodyPart, setBodyPart }: any) =>
                 <Button
                     className="search-btn"
                     sx={{
-                        bgcolor: '#ff2625',
-                        color: '#fff',
+                        bgcolor: '#daff96',
+                        color: '#17242a',
                         textTransform: 'none',
                         width: { lg: '175px', xs: '80px' },
                         fontSize: { lg: '20px', xs: '14px' },

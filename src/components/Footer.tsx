@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <Box
             mt='80px'
-            bgcolor={'#fff3f4'}
+            bgcolor={'#3aafa9'}
         >
             <Stack
                 gap={'40px'}
@@ -18,6 +18,7 @@ export const Footer = () => {
                     variant="h5"
                     pb={'40px'}
                     mt={'20px'}
+                    color={'#def2f1'}
                 >
                     Made by coderKrysio
                 </Typography>
